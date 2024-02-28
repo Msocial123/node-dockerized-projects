@@ -3,7 +3,7 @@ pipeline {
     stages{
         stage("checkout"){
             steps{
-                checkout scm
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Msocial123/node-dockerized-projects.git']])
             }
         }
 
